@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Semana Acadêmica de Computação</title>
+    <link rel="stylesheet" href="CSS/Prática_2.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Semana Acadêmica da Computação</h1>
+        <p>Inovação, Tecnologia e Conhecimento na Prática</p>
+    </header>
+
+    <main class="container">
+
+        <!-- PARTE 1: Informações do Evento (Listas) -->
+        <section id="informacoes">
+            <h2>Informações do Evento</h2>
+
+            <!-- Lista Ordenada: Passo a Passo da Inscrição -->
+            <h3>Como Fazer sua Inscrição</h3>
+            <ol>
+                <li>Preencha seus dados pessoais e de acesso no formulário abaixo.</li>
+                <li>Selecione o seu tipo de ingresso e os minicursos extras de seu interesse.</li>
+                <li>Confirme o envio da sua inscrição e aguarde o e-mail de confirmação.</li>
+            </ol>
+
+            <!-- Lista Não Ordenada: Benefícios -->
+            <h3>Benefícios de Participar</h3>
+            <ul>
+                <li>Certificado de horas complementares de 20 horas acadêmicas.</li>
+                <li>Oportunidade de <i>networking</i> com professores, estudantes e empresas parceiras.</li>
+                <li>Sorteio de brindes exclusivos, livros de tecnologia e licenças de software.</li>
+            </ul>
+
+            <!-- Lista de Definição: Glossário das Modalidades -->
+            <h3>Modalidades de Atividades (Glossário)</h3>
+            <dl>
+                <dt><b>Palestra</b></dt>
+                <dd>Apresentação teórica e explicativa conduzida por um especialista convidado sobre temas atuais da área de computação.</dd>
+
+                <dt><b>Workshop / Minicurso</b></dt>
+                <dd>Atividade prática com mão na massa, focada na aprendizagem de novas ferramentas, linguagens de programação e frameworks.</dd>
+
+                <dt><b>Hackathon</b></dt>
+                <dd>Maratona intensa de programação e desenvolvimento de soluções tecnológicas em equipe para resolver desafios reais.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- PARTE 2: Cronograma (Tabelas) -->
+        <section id="cronograma">
+            <h2>Cronograma Geral do Evento</h2>
+            <p>Confira a programação completa dos três dias de evento:</p>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Dia 1 (Segunda-feira)</th>
+                        <th>Dia 2 (Terça-feira)</th>
+                        <th>Dia 3 (Quarta-feira)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>08:00 - 10:00</b></td>
+                        <td>Abertura e Palestra Magna</td>
+                        <!-- Uso de rowspan: Atividade que dura dois horários seguidos -->
+                        <td rowspan="2">Hackathon: Maratona de Código (Parte 1 e 2)</td>
+                        <td>Workshop: Inteligência Artificial</td>
+                    </tr>
+                    <tr>
+                        <td><b>10:00 - 12:00</b></td>
+                        <td>Mesa Redonda: Mercado de Trabalho</td>
+                        <td>Minicurso: Desenvolvimento Web</td>
+                    </tr>
+                    <!-- Uso de colspan: Linha de Coffee Break mesclando todos os dias -->
+                    <tr class="coffee-break">
+                        <td><b>12:00 - 13:30</b></td>
+                        <td colspan="3"><b>Coffee Break & Intervalo Geral de Almoço</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>13:30 - 15:30</b></td>
+                        <td>Apresentação de Trabalhos</td>
+                        <td>Minicurso: Segurança da Informação</td>
+                        <td>Encerramento e Premiação</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- PARTE 3: Formulário de Inscrição (Inputs Iniciais) -->
+        <section id="inscricao">
+            <h2>Formulário de Inscrição</h2>
+            <p>Preencha os campos abaixo para garantir a sua vaga no evento:</p>
+
+            <form action="#" method="POST">
+                
+                <!-- Campos de Texto e Senha -->
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="ra">RA (Registro Acadêmico):</label>
+                    <input type="text" id="ra" name="ra" placeholder="Digite seu RA" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha de Acesso:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Crie uma senha para o portal" required>
+                </div>
+
+                <!-- Botões de Rádio (Seleção Única) -->
+                <div class="form-group">
+                    <label><b>Tipo de Ingresso:</b></label>
+                    <div class="options-group">
+                        <label><input type="radio" name="tipo_ingresso" value="estudante" checked> Estudante</label>
+                        <label><input type="radio" name="tipo_ingresso" value="professor"> Professor</label>
+                        <label><input type="radio" name="tipo_ingresso" value="visitante"> Visitante Externo</label>
+                    </div>
+                </div>
+
+                <!-- Caixas de Seleção (Múltipla Escolha) -->
+                <div class="form-group">
+                    <label><b>Minicursos Extras de Interesse:</b></label>
+                    <div class="options-group">
+                        <label><input type="checkbox" name="minicursos" value="python"> Minicurso de Python</label>
+                        <label><input type="checkbox" name="minicursos" value="redes"> Minicurso de Redes de Computadores</label>
+                        <label><input type="checkbox" name="minicursos" value="linux"> Minicurso de Linux e Shell Script</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-submit">Enviar Inscrição</button>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <small>Semana Acadêmica de Computação | Curso de Ciência da Computação - Disciplina de Desenvolvimento Web</small>
+    </footer>
+
+</body>
+</html>

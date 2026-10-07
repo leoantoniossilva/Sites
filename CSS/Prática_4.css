@@ -1,0 +1,145 @@
+/* ==========================================================================
+   1. RESET BÁSICO E CONFIGURAÇÃO DA PÁGINA
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* REQUISITO: Regra abreviada 'background' configurando imagem, repetição, fixação e posicionamento */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    /* Sintaxe shorthand: imagem | repetição | posicionamento | fixação | cor de fundo fallback */
+    background: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1920&auto=format&fit=crop') no-repeat center center fixed #f0fdf4;
+    background-size: cover; /* Garante que a imagem preencha toda a tela */
+    color: #2d3748;
+}
+
+/* Container centralizado com fundo semitransparente para destacar sobre a imagem de fundo */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================================================
+   2. SELETORES DE ELEMENTO (h1, p, a), CLASSE (.destaque) E ID (#principal)
+   ========================================================================== */
+
+/* REQUISITO: Seletor de ID (#principal) */
+#principal {
+    background-color: #1b4332; /* Estilização de background-color */
+    color: #ffffff;            /* Estilização de color */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* REQUISITO: Seletor de Elemento (h1) */
+h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* REQUISITO: Seletor de Elemento (p) */
+p {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 12px;
+}
+
+/* REQUISITO: Seletor de Elemento (a) */
+a {
+    color: #2d6a4f;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #1b4332;
+}
+
+/* REQUISITO: Seletor de Classe (.destaque) */
+.destaque {
+    color: #d8f3dc;
+    background-color: #2d6a4f;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   3. ESTILIZAÇÃO DE SEÇÕES E TABELAS
+   ========================================================================== */
+
+h2 {
+    color: #1b4332;
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #40916c;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #2d6a4f;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #b7e4c7;
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #b7e4c7;
+}
+
+th {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.coffee-break {
+    background-color: #d8f3dc;
+    color: #1b4332;
+}
+
+/* ==========================================================================
+   4. RODAPÉ
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b4332;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
+}

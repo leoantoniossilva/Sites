@@ -1,0 +1,322 @@
+/* ==========================================================================
+   1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+
+/* O seletor universal (*) seleciona TODOS os elementos da página */
+* {
+    margin: 0;                   /* Remove a margem padrão dos elementos */
+    padding: 0;                  /* Remove o espaçamento interno padrão */
+    box-sizing: border-box;      /* Garante que 'padding' e 'border' não aumentem a largura total do elemento */
+}
+
+/* Configurações aplicadas a todo o corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define as fontes padrão */
+    line-height: 1.6;           /* Define a altura da linha para leitura */
+    background-color: #f0fdf4;  /* Cor de fundo verde suave */
+    color: #2d3748;             /* Cor principal do texto */
+}
+
+/* ==========================================================================
+   2. ESTRUTURA E CONTAINER PRINCIPAL
+   ========================================================================== */
+
+.container {
+    max-width: 1000px;                      /* Impede expansão excessiva em telas grandes */
+    margin: 30px auto;                      /* Centraliza a caixa na página */
+    background-color: #ffffff;             /* Fundo branco */
+    padding: 30px;                          /* Espaço interno */
+    border-radius: 8px;                     /* Cantos arredondados */
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.1); /* Sombra sutil em tom verde */
+}
+
+/* ==========================================================================
+   3. CABEÇALHO DO EVENTO (BANNER DO TOPO)
+   ========================================================================== */
+
+header {
+    background-color: #1b4332; /* Verde floresta escuro */
+    color: #ffffff;            /* Texto branco */
+    text-align: center;        /* Centralizado */
+    padding: 40px 20px;
+}
+
+header h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+header p {
+    font-size: 18px;
+    color: #d8f3dc;            /* Verde claro pastel */
+}
+
+/* ==========================================================================
+   4. TÍTULOS E SEPARADORES (SEÇÕES)
+   ========================================================================== */
+
+h2 {
+    color: #1b4332;             /* Verde escuro */
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #40916c; /* Linha verde decorativa */
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #2d6a4f;             /* Verde médio */
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #d8f3dc;  /* Linha divisória verde clara */
+    margin: 35px 0;
+}
+
+/* ==========================================================================
+   5. ESTILIZAÇÃO DAS LISTAS E TABELA
+   ========================================================================== */
+
+ol, ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+dl {
+    margin-top: 10px;
+}
+
+dt {
+    font-size: 16px;
+    color: #1b4332;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    color: #4a5568;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table, th, td {
+    border: 1px solid #b7e4c7;
+}
+
+th {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    padding: 12px;
+    font-size: 15px;
+}
+
+td {
+    padding: 12px;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+.coffee-break {
+    background-color: #d8f3dc;
+    color: #1b4332;
+}
+
+/* ==========================================================================
+   6. ESTILIZAÇÃO DE FIELDSET, LEGEND E ESTRUTURA DO FORMULÁRIO
+   ========================================================================== */
+
+form {
+    margin-top: 20px;
+}
+
+/* Estilização das tags <fieldset> e <legend> */
+fieldset {
+    border: 1px solid #b7e4c7;  /* Borda esverdeada discreta */
+    border-radius: 8px;         /* Cantos arredondados no bloco */
+    padding: 20px;              /* Espaço interno dos campos */
+    margin-bottom: 25px;        /* Espaço entre um bloco de fieldset e o próximo */
+    background-color: #fafdfb;  /* Fundo sutilmente esverdeado */
+}
+
+legend {
+    font-weight: bold;
+    color: #1b4332;             /* Verde floresta */
+    font-size: 16px;
+    padding: 0 10px;            /* Espaço para afastar o texto da borda do fieldset */
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   7. INPUTS, SELECT, TEXTAREA E VALIDAÇÃO VISUAL (:focus, :valid, :invalid)
+   ========================================================================== */
+
+/* Estilização padronizada para todos os campos digitáveis e seletores */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e0;  /* Borda padrão neutra */
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Estilo do Textarea */
+textarea {
+    resize: vertical;           /* Permite ao usuário redimensionar apenas a altura */
+}
+
+/* REQUISITO: Estado de :focus */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #40916c;                          /* Borda fica verde ao focar */
+    outline: none;                                  /* Remove contorno padrão */
+    box-shadow: 0 0 5px rgba(64, 145, 108, 0.4);   /* Brilho suave esverdeado */
+}
+
+/* REQUISITO: Feedback de Validação Visual com :valid e :invalid */
+/* O seletor :user-invalid garante que o erro só apareça após interagir com o campo */
+input:required:focus:invalid,
+select:required:focus:invalid {
+    border-color: #e53e3e;                          /* Borda vermelha para dado incorreto */
+    box-shadow: 0 0 5px rgba(229, 62, 62, 0.3);
+}
+
+input:required:valid,
+select:required:valid {
+    border-color: #38a169;                          /* Borda verde para preenchimento correto */
+}
+
+/* Estilo para <select> com <optgroup> */
+optgroup {
+    font-weight: bold;
+    color: #1b4332;
+}
+
+/* Estilo do Seletor de Cor (type="color") */
+input[type="color"] {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #cbd5e0;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #ffffff;
+    padding: 4px;
+}
+
+/* Estilo do Upload de Arquivo (type="file") */
+input[type="file"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px dashed #40916c;
+    border-radius: 5px;
+    background-color: #f0fdf4;
+    cursor: pointer;
+}
+
+/* Agrupador de Checkboxes e Radios */
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.options-group label {
+    font-weight: normal;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   8. BOTÕES DE AÇÃO
+   ========================================================================== */
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.btn-secondary {
+    background-color: #e8f5e9;
+    color: #1b4332;
+    border: 1px solid #b7e4c7;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 50%;
+}
+
+.btn-secondary:hover {
+    background-color: #c8e6c9;
+}
+
+.btn-submit {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 50%;
+}
+
+.btn-submit:hover {
+    background-color: #1b4332;
+}
+
+/* ==========================================================================
+   9. RODAPÉ
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #d8f3dc;
+    color: #1b4332;
+}

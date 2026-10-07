@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Semana Acadêmica de Computação - Inscrição Avançada</title>
+    <link rel="stylesheet" href="CSS/Prática_3.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header>
+        <h1>Semana Acadêmica da Computação</h1>
+        <p>Inovação, Tecnologia e Conhecimento na Prática</p>
+    </header>
+
+    <main class="container">
+
+        <!-- PARTE 1: Informações do Evento (Listas) -->
+        <section id="informacoes">
+            <h2>Informações do Evento</h2>
+
+            <!-- Lista Ordenada: Passo a Passo da Inscrição -->
+            <h3>Como Fazer sua Inscrição</h3>
+            <ol>
+                <li>Preencha seus dados pessoais e de acesso no formulário abaixo.</li>
+                <li>Selecione o seu tipo de ingresso e os minicursos extras de seu interesse.</li>
+                <li>Confirme o envio da sua inscrição e aguarde o e-mail de confirmação.</li>
+            </ol>
+
+            <!-- Lista Não Ordenada: Benefícios -->
+            <h3>Benefícios de Participar</h3>
+            <ul>
+                <li>Certificado de horas complementares de 20 horas acadêmicas.</li>
+                <li>Oportunidade de <i>networking</i> com professores, estudantes e empresas parceiras.</li>
+                <li>Sorteio de brindes exclusivos, livros de tecnologia e licenças de software.</li>
+            </ul>
+
+            <!-- Lista de Definição: Glossário das Modalidades -->
+            <h3>Modalidades de Atividades (Glossário)</h3>
+            <dl>
+                <dt><b>Palestra</b></dt>
+                <dd>Apresentação teórica e explicativa conduzida por um especialista convidado sobre temas atuais da área de computação.</dd>
+
+                <dt><b>Workshop / Minicurso</b></dt>
+                <dd>Atividade prática com mão na massa, focada na aprendizagem de novas ferramentas, linguagens de programação e frameworks.</dd>
+
+                <dt><b>Hackathon</b></dt>
+                <dd>Maratona intensa de programação e desenvolvimento de soluções tecnológicas em equipe para resolver desafios reais.</dd>
+            </dl>
+        </section>
+
+        <hr>
+
+        <!-- PARTE 2: Cronograma (Tabelas) -->
+        <section id="cronograma">
+            <h2>Cronograma Geral do Evento</h2>
+            <p>Confira a programação completa dos três dias de evento:</p>
+
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Dia 1 (Segunda-feira)</th>
+                        <th>Dia 2 (Terça-feira)</th>
+                        <th>Dia 3 (Quarta-feira)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>08:00 - 10:00</b></td>
+                        <td>Abertura e Palestra Magna</td>
+                        <!-- Uso de rowspan: Atividade que dura dois horários seguidos -->
+                        <td rowspan="2">Hackathon: Maratona de Código (Parte 1 e 2)</td>
+                        <td>Workshop: Inteligência Artificial</td>
+                    </tr>
+                    <tr>
+                        <td><b>10:00 - 12:00</b></td>
+                        <td>Mesa Redonda: Mercado de Trabalho</td>
+                        <td>Minicurso: Desenvolvimento Web</td>
+                    </tr>
+                    <!-- Uso de colspan: Linha de Coffee Break mesclando todos os dias -->
+                    <tr class="coffee-break">
+                        <td><b>12:00 - 13:30</b></td>
+                        <td colspan="3"><b>Coffee Break & Intervalo Geral de Almoço</b></td>
+                    </tr>
+                    <tr>
+                        <td><b>13:30 - 15:30</b></td>
+                        <td>Apresentação de Trabalhos</td>
+                        <td>Minicurso: Segurança da Informação</td>
+                        <td>Encerramento e Premiação</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- PARTE 3: Formulário de Inscrição Avançado (Desafio Prático de Laboratório) -->
+        <section id="inscricao">
+            <h2>Formulário de Cadastro Completo</h2>
+            <p>Preencha os campos abaixo para concluir seu registro no evento acadêmico:</p>
+
+            <form action="#" method="POST">
+                
+                <!-- Requisito: Estruturação com <fieldset> e <legend> (Grupo 1) -->
+                <fieldset>
+                    <legend>1. Dados Pessoais e Acesso</legend>
+
+                    <!-- Input type="text" -->
+                    <div class="form-group">
+                        <label for="nome">Nome Completo:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                    </div>
+
+                    <!-- Input type="email" -->
+                    <div class="form-group">
+                        <label for="email">E-mail Acadêmico ou Pessoal:</label>
+                        <input type="email" id="email" name="email" placeholder="seu.email@dominio.com" required>
+                    </div>
+
+                    <!-- Input type="text" para RA -->
+                    <div class="form-group">
+                        <label for="ra">RA (Registro Acadêmico):</label>
+                        <input type="text" id="ra" name="ra" placeholder="Digite seu RA" required>
+                    </div>
+
+                    <!-- Input type="password" -->
+                    <div class="form-group">
+                        <label for="senha">Senha de Acesso:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Crie uma senha para o portal" required minlength="6">
+                    </div>
+
+                    <!-- Input type="date" -->
+                    <div class="form-group">
+                        <label for="nascimento">Data de Nascimento:</label>
+                        <input type="date" id="nascimento" name="nascimento" required>
+                    </div>
+                </fieldset>
+
+                <!-- Requisito: Estruturação com <fieldset> e <legend> (Grupo 2) -->
+                <fieldset>
+                    <legend>2. Perfil Acadêmico e Agendamentos</legend>
+
+                    <!-- Requisito: Elemento <select> agrupado com <optgroup> -->
+                    <div class="form-group">
+                        <label for="curso">Curso / Área de Atuação:</label>
+                        <select id="curso" name="curso" required>
+                            <option value="" disabled selected>Selecione seu curso...</option>
+                            <optgroup label="Graduação em Computação">
+                                <option value="cc">Ciência da Computação</option>
+                                <option value="si">Sistemas de Informação</option>
+                                <option value="es">Engenharia de Software</option>
+                                <option value="ads">Análise e Des. de Sistemas</option>
+                            </optgroup>
+                            <optgroup label="Outras Áreas / Externo">
+                                <option value="eng_outras">Outras Engenharias</option>
+                                <option value="outros">Outros Cursos</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <!-- Input type="month" -->
+                    <div class="form-group">
+                        <label for="formatura">Previsão de Término do Curso (Mês/Ano):</label>
+                        <input type="month" id="formatura" name="formatura">
+                    </div>
+
+                    <!-- Input type="week" -->
+                    <div class="form-group">
+                        <label for="semana_minicursos">Semana Preferencial para Minicursos:</label>
+                        <input type="week" id="semana_minicursos" name="semana_minicursos">
+                    </div>
+
+                    <!-- Input type="number" -->
+                    <div class="form-group">
+                        <label for="periodo">Semestre/Período Atual:</label>
+                        <input type="number" id="periodo" name="periodo" min="1" max="12" placeholder="Ex: 4">
+                    </div>
+
+                    <!-- Input type="number" -->
+                    <div class="form-group">
+                        <label for="acompanhantes">Quantidade de Acompanhantes (Encerramento):</label>
+                        <input type="number" id="acompanhantes" name="acompanhantes" min="0" max="5" value="0">
+                    </div>
+
+                    <!-- Input type="datetime-local" -->
+                    <div class="form-group">
+                        <label for="mentoria">Agendamento de Mentoria de Carreira:</label>
+                        <input type="datetime-local" id="mentoria" name="mentoria">
+                    </div>
+                </fieldset>
+
+                <!-- Requisito: Estruturação com <fieldset> e <legend> (Grupo 3) -->
+                <fieldset>
+                    <legend>3. Personalização, Documentos e Informações Adicionais</legend>
+
+                    <!-- Input type="radio" -->
+                    <div class="form-group">
+                        <label><b>Tipo de Ingresso:</b></label>
+                        <div class="options-group">
+                            <label><input type="radio" name="tipo_ingresso" value="estudante" checked> Estudante</label>
+                            <label><input type="radio" name="tipo_ingresso" value="professor"> Professor</label>
+                            <label><input type="radio" name="tipo_ingresso" value="visitante"> Visitante Externo</label>
+                        </div>
+                    </div>
+
+                    <!-- Input type="checkbox" -->
+                    <div class="form-group">
+                        <label><b>Minicursos Extras de Interesse:</b></label>
+                        <div class="options-group">
+                            <label><input type="checkbox" name="minicursos" value="python"> Minicurso de Python</label>
+                            <label><input type="checkbox" name="minicursos" value="redes"> Minicurso de Redes de Computadores</label>
+                            <label><input type="checkbox" name="minicursos" value="linux"> Minicurso de Linux e Shell Script</label>
+                        </div>
+                    </div>
+
+                    <!-- Input type="color" -->
+                    <div class="form-group">
+                        <label for="cor_cracha">Cor Personalizada do Crachá Virtual:</label>
+                        <input type="color" id="cor_cracha" name="cor_cracha" value="#1b4332">
+                    </div>
+
+                    <!-- Input type="file" -->
+                    <div class="form-group">
+                        <label for="comprovante">Envio de Comprovante de Vínculo (PDF) ou Foto (JPG/PNG):</label>
+                        <input type="file" id="comprovante" name="comprovante" accept=".pdf, .png, .jpg, .jpeg">
+                    </div>
+
+                    <!-- Requisito: Campo <textarea> -->
+                    <div class="form-group">
+                        <label for="observacoes">Observações ou Expectativas para o Evento:</label>
+                        <textarea id="observacoes" name="observacoes" rows="4" placeholder="Escreva aqui suas dúvidas, expectativas ou necessidades especiais de acessibilidade..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- Botões de Ação -->
+                <div class="button-group">
+                    <button type="button" class="btn-secondary">Gerar Prévia do Crachá</button>
+                    <button type="submit" class="btn-submit">Finalizar Inscrição</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <small>I Semana Acadêmica de Computação | Curso de Ciência da Computação - Disciplina de Desenvolvimento Web</small>
+    </footer>
+
+</body>
+</html>

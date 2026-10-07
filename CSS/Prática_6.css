@@ -1,0 +1,265 @@
+/* ==========================================================================
+   1. REGRA FUNDAMENTAL: RESET E PADRONIZAÇÃO DO BOX MODEL
+   ========================================================================== */
+
+/* Padronização de cálculo dimensional e herança tipográfica para todos os elementos */
+*, ::before, ::after {
+    box-sizing: border-box; /* 100% de width passa a incluir padding e border */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f0fdf4; /* Fundo suave em tom verde */
+    color: #2d3748;
+}
+
+/* Contêiner Principal da Página */
+.container {
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(27, 67, 50, 0.1);
+}
+
+/* ==========================================================================
+   2. CABEÇALHO, TÍTULOS E NAVEGAÇÃO
+   ========================================================================== */
+
+#principal {
+    background-color: #1b4332;
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 8px;
+    color: #ffffff;
+}
+
+h2 {
+    color: #1b4332;
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #40916c;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #2d6a4f;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #b7e4c7;
+    margin: 30px 0;
+}
+
+/* ==========================================================================
+   3. ESTILIZAÇÃO DE LISTAS E TABELA
+   ========================================================================== */
+
+ol, ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #b7e4c7;
+}
+
+th {
+    background-color: #2d6a4f;
+    color: #ffffff;
+    padding: 10px;
+}
+
+td {
+    padding: 10px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.coffee-break {
+    background-color: #d8f3dc;
+    color: #1b4332;
+}
+
+/* ==========================================================================
+   4. TIPOGRAFIA & DECORAÇÃO DE TEXTO (REQUISITO DA ATIVIDADE)
+   ========================================================================== */
+
+/* Configuração dos Labels de acordo com a Etapa 4 da atividade */
+.form-group label {
+    display: block;
+    text-transform: uppercase; /* Caixa alta */
+    font-size: 8.5pt;            /* Tamanho exato especificado */
+    letter-spacing: 0.6px;      /* Espaçamento entre letras */
+    font-weight: bold;
+    color: #1b4332;
+    margin-bottom: 6px;
+}
+
+/* Links decorativos com linha pontilhada */
+.link-termo {
+    color: #2d6a4f;
+    text-decoration: underline dotted; /* Linha pontilhada solicitada */
+    font-weight: bold;
+}
+
+.link-termo:hover {
+    color: #1b4332;
+}
+
+.destaque {
+    color: #d8f3dc;
+    background-color: #2d6a4f;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   5. FORMULÁRIO, BOX MODEL & ESTADOS INTERATIVOS (DIPS E INPUTS)
+   ========================================================================== */
+
+/* Cartão do formulário com background de contraste suave */
+.form-card {
+    background-color: #f8fafc;
+    padding: 24px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    margin-top: 15px;
+}
+
+/* Agrupamento em Divs conforme a Etapa 1 */
+.form-group {
+    margin-bottom: 14px; /* Espaçamento de 14px entre cada bloco de div */
+}
+
+/* Box Model aplicado a Entradas de Texto, Select e Textarea (Etapa 2) */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    font-family: inherit;
+    width: 100%;
+    padding: 10px 14px;                  /* Respiro interno conforme especificado */
+    border: 1.5px solid #cbd5e1;         /* Borda padrão */
+    border-radius: 5px;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Mudança de fundo e borda no estado :focus (Etapa 3) */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+    background-color: #ffffff;
+    border-color: #2d6a4f;               /* Cor de destaque da paleta */
+    outline: none;
+    box-shadow: 0 0 4px rgba(45, 106, 79, 0.3);
+}
+
+/* Configuração de Radio e Checkbox (Ajuste de margens externas para não colar no texto) */
+input[type="radio"],
+input[type="checkbox"] {
+    margin-right: 8px;                    /* Margem direita solicitada */
+    cursor: pointer;
+}
+
+.options-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+/* Rótulos das opções com texto normal para contrastar com o label principal */
+.option-label {
+    text-transform: none !important;
+    font-size: 14px !important;
+    letter-spacing: normal !important;
+    font-weight: normal !important;
+    color: #2d3748 !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   6. BOTÃO DE AÇÃO (ACTIONS)
+   ========================================================================== */
+
+.actions {
+    margin-top: 20px;
+}
+
+.btn-submit {
+    display: inline-block;
+    width: 100%;
+    background-color: #2d6a4f;           /* Cor de destaque */
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;               /* Remoção de sublinhado indesejado */
+    transition: background-color 0.2s ease;
+    text-align: center;
+}
+
+/* Transição de cor em :hover */
+.btn-submit:hover {
+    background-color: #1b4332;
+}
+
+/* ==========================================================================
+   7. RODAPÉ
+   ========================================================================== */
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1b4332;
+    color: #ffffff;
+    margin-top: 30px;
+}
+
+footer p {
+    color: #ffffff;
+    margin: 0;
+}

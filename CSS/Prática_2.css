@@ -1,0 +1,239 @@
+/* ==========================================================================
+   1. RESET BÁSICO E CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+
+/* O seletor universal (*) seleciona TODOS os elementos da página */
+* {
+    margin: 0;                   /* Remove a margem padrão dos elementos */
+    padding: 0;                  /* Remove o espaçamento interno padrão */
+    box-sizing: border-box;      /* Garante que 'padding' e 'border' não aumentem a largura total do elemento */
+}
+
+/* Configurações aplicadas a todo o corpo da página */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Define as fontes padrão (da esquerda para a direita) */
+    line-height: 1.6;           /* Define a altura da linha para deixar o texto mais legível */
+    background-color: #f4f6f9;  /* Cor de fundo cinza bem claro para o site */
+    color: #333333;             /* Cor principal do texto (um cinza bem escuro, suave para a leitura) */
+}
+
+/* ==========================================================================
+   2. ESTRUTURA E CONTAINER PRINCIPAL
+   ========================================================================== */
+
+/* O container centraliza o conteúdo do site e dá uma aparência de 'cartão' */
+.container {
+    max-width: 1000px;                      /* Impede que o conteúdo se estique em telas muito grandes */
+    margin: 30px auto;                      /* 30px no topo/base, 'auto' centraliza o bloco na horizontal */
+    background-color: #ffffff;             /* Fundo branco para a caixa de conteúdo */
+    padding: 30px;                          /* Espaço interno ao redor do conteúdo */
+    border-radius: 8px;                     /* Arredonda os cantos da caixa principal */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra suave para dar sensação de elevação */
+}
+
+/* ==========================================================================
+   3. CABEÇALHO DO EVENTO (BANNER DO TOPO)
+   ========================================================================== */
+
+header {
+    background-color: #1a365d; /* Azul marinho escuro */
+    color: #ffffff;            /* Texto na cor branca para dar contraste */
+    text-align: center;        /* Centraliza o título e o subtítulo */
+    padding: 40px 20px;        /* Espaço interno: 40px no topo/fundo e 20px nas laterais */
+}
+
+header h1 {
+    font-size: 32px;           /* Tamanho da fonte do título principal */
+    margin-bottom: 8px;        /* Espaço abaixo do título para separar do subtítulo */
+}
+
+header p {
+    font-size: 18px;           /* Tamanho do texto do subtítulo */
+    color: #e2e8f0;            /* Azul bem claro/acinzentado para diferenciar do título */
+}
+
+/* ==========================================================================
+   4. TÍTULOS E SEPARADORES (SEÇÕES)
+   ========================================================================== */
+
+/* Títulos principais de cada seção (H2) */
+h2 {
+    color: #1a365d;             /* Azul escuro */
+    font-size: 24px;            /* Tamanho da fonte */
+    margin-bottom: 15px;        /* Espaço abaixo do título */
+    border-bottom: 2px solid #3182ce; /* Linha decorativa azul abaixo do título */
+    padding-bottom: 5px;        /* Espaço entre o texto do título e a linha decorativa */
+}
+
+/* Subtítulos dentro das seções (H3) */
+h3 {
+    color: #2b6cb0;             /* Azul médio */
+    font-size: 18px;            /* Tamanho da fonte */
+    margin-top: 20px;           /* Espaço acima para afastar do bloco anterior */
+    margin-bottom: 10px;        /* Espaço abaixo antes dos itens */
+}
+
+/* Linhas horizontais de divisão entre as seções (<hr>) */
+hr {
+    border: none;               /* Remove a borda padrão do navegador */
+    height: 1px;                /* Define a espessura da linha */
+    background-color: #e2e8f0;  /* Cor cinza claro para a linha */
+    margin: 35px 0;             /* Espaço de 35px acima e abaixo da linha */
+}
+
+/* ==========================================================================
+   5. PARTE 1: ESTILIZAÇÃO DAS LISTAS
+   ========================================================================== */
+
+/* Regras aplicadas tanto para listas ordenadas (<ol>) quanto não ordenadas (<ul>) */
+ol, ul {
+    margin-left: 25px;          /* Empurra as listas para a direita, dando espaço aos números/bolinhas */
+    margin-bottom: 15px;        /* Espaço abaixo da lista inteira */
+}
+
+/* Itens individuais das listas (<li>) */
+li {
+    margin-bottom: 8px;         /* Dá um pequeno espaço entre um item e outro da lista */
+}
+
+/* Lista de Definição (<dl>) */
+dl {
+    margin-top: 10px;
+}
+
+/* Termo a ser definido (<dt>) */
+dt {
+    font-size: 16px;
+    color: #2d3748;             /* Cor do texto um pouco mais escura para dar destaque */
+    margin-top: 10px;           /* Espaço antes do termo */
+}
+
+/* Descrição/Definição do termo (<dd>) */
+dd {
+    margin-left: 20px;          /* Recua a descrição para a direita sob o termo */
+    margin-bottom: 10px;        /* Espaço abaixo de cada definição */
+    color: #4a5568;             /* Cor ligeiramente mais suave que o termo */
+}
+
+/* ==========================================================================
+   6. PARTE 2: ESTILIZAÇÃO DA TABELA (CRONOGRAMA)
+   ========================================================================== */
+
+table {
+    width: 100%;                /* Faz a tabela ocupar toda a largura do container */
+    border-collapse: collapse;  /* Une as bordas das células, eliminando espaços duplos */
+    margin-top: 20px;           /* Espaço acima da tabela */
+    margin-bottom: 20px;        /* Espaço abaixo da tabela */
+    text-align: center;         /* Centraliza o texto dentro de todas as células */
+}
+
+/* Aplica a borda na tabela, nos cabeçalhos e nas células de dados */
+table, th, td {
+    border: 1px solid #cbd5e0;  /* Borda fina cinza em volta das células */
+}
+
+/* Células de Cabeçalho (<th>) */
+th {
+    background-color: #2b6cb0;  /* Fundo azul nos títulos das colunas */
+    color: #ffffff;             /* Texto branco para leitura clara */
+    padding: 12px;              /* Espaço interno para não colar o texto nas bordas */
+    font-size: 15px;
+}
+
+/* Células Comuns (<td>) */
+td {
+    padding: 12px;              /* Espaço interno das células */
+    font-size: 14px;
+    background-color: #ffffff;  /* Fundo branco padrão */
+}
+
+/* Classe especial para destacar a linha do Coffee Break (colspan) */
+.coffee-break {
+    background-color: #feebc8;  /* Fundo bege/amarelado claro */
+    color: #744210;             /* Texto em tom marrom/dourado escuro */
+}
+
+/* ==========================================================================
+   7. PARTE 3: ESTILIZAÇÃO DO FORMULÁRIO DE INSCRIÇÃO
+   ========================================================================== */
+
+form {
+    margin-top: 20px;           /* Espaço entre a introdução e o primeiro campo */
+}
+
+/* Div que agrupa cada rótulo (label) com seu respetivo campo (input) */
+.form-group {
+    margin-bottom: 20px;        /* Espaço vertical entre um grupo de campos e o próximo */
+}
+
+/* Rótulos dos campos */
+.form-group label {
+    display: block;             /* Faz o rótulo ocupar a linha toda, jogando o input para baixo */
+    font-weight: bold;          /* Deixa o texto em negrito */
+    margin-bottom: 6px;         /* Espaço entre o rótulo e o campo de digitação */
+}
+
+/* Estilização específica dos campos de texto e senha */
+input[type="text"],
+input[type="password"] {
+    width: 100%;                /* Faz o campo ocupar toda a largura disponível */
+    padding: 10px;              /* Altura e espaço para digitar confortavelmente */
+    border: 1px solid #cbd5e0;  /* Borda discreta */
+    border-radius: 5px;         /* Cantos levemente arredondados */
+    font-size: 15px;
+}
+
+/* Efeito quando o usuário clica ou foca em um campo de texto */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #3182ce;      /* A borda fica azul quando selecionada */
+    outline: none;              /* Remove a borda azul padrão do navegador */
+}
+
+/* Agrupador de Opções (para Radio buttons e Checkboxes) */
+.options-group {
+    display: flex;              /* Usa Flexbox para alinhar as opções */
+    flex-direction: column;     /* Empilha as opções uma abaixo da outra */
+    gap: 8px;                   /* Espaço uniforme de 8px entre as opções */
+    margin-top: 5px;
+}
+
+/* Estilo para as opções de marcação */
+.options-group label {
+    font-weight: normal;        /* Remove o negrito padrão para as opções individuais */
+    display: flex;              /* Alinha o ícone do botão com o texto */
+    align-items: center;        /* Centraliza o botão e o texto na mesma linha */
+    gap: 8px;                   /* Distância entre o botão e a palavra */
+    cursor: pointer;            /* Transforma o ponteiro do rato em mãozinha de clique */
+}
+
+/* Botão de Enviar o Formulário */
+.btn-submit {
+    background-color: #2b6cb0;  /* Cor de fundo azul */
+    color: #ffffff;             /* Texto branco */
+    border: none;               /* Remove a borda padrão do botão */
+    padding: 12px 25px;         /* Tamanho interno (12px topo/fundo, 25px lados) */
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;         /* Arredonda os cantos do botão */
+    cursor: pointer;            /* Mostra a mãozinha de clique ao passar o rato */
+    transition: background-color 0.2s ease; /* Transição suave na cor ao passar o rato */
+    width: 100%;                /* Faz o botão ocupar toda a largura da caixa */
+}
+
+/* Efeito ao passar o rato por cima do botão (Hover) */
+.btn-submit:hover {
+    background-color: #1a365d;  /* Escurece a cor do botão para um azul marinho */
+}
+
+/* ==========================================================================
+   8. RODAPÉ DA PÁGINA
+   ========================================================================== */
+
+footer {
+    text-align: center;         /* Centraliza o texto do rodapé */
+    padding: 20px;              /* Espaço interno */
+    margin-top: 30px;           /* Afasta o rodapé do conteúdo principal */
+    background-color: #edf2f7;  /* Fundo cinza suave */
+    color: #4a5568;             /* Cor do texto discreta */
+}

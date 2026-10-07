@@ -1,0 +1,109 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÃO GLOBAL DO BOX MODEL
+   ========================================================================== */
+*, ::before, ::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f1f1f1;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o rodapé fique sempre na parte inferior */
+}
+
+/* ==========================================================================
+   CABEÇALHO (HEADER CINZA ESCURO)
+   ========================================================================== */
+.header {
+    background-color: #616161; /* Tom cinza conforme apresentado na foto */
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.header h1 {
+    font-size: 32px;
+    font-weight: normal;
+}
+
+/* ==========================================================================
+   LAYOUT PRINCIPAL (FLEXBOX PARA SIDEBAR E CONTEÚDO)
+   ========================================================================== */
+.main-layout {
+    display: flex;
+    flex: 1; /* Ocupa todo o espaço vertical disponível entre o topo e o rodapé */
+}
+
+/* ==========================================================================
+   MENU LATERAL ESQUERDO (SIDEBAR CINZA CLARO)
+   ========================================================================== */
+.sidebar {
+    width: 25%;               /* Largura da barra lateral */
+    min-width: 180px;
+    background-color: #cccccc; /* Tom de cinza claro do menu na foto */
+    padding: 20px 0;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    margin-bottom: 5px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 20px;
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.2s;
+}
+
+.sidebar a:hover {
+    background-color: #bbbbbb;
+}
+
+/* Estilo para destacar a página ativa */
+.sidebar a.active {
+    background-color: #9e9e9e;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* ==========================================================================
+   CONTEÚDO PRINCIPAL (ÁREA DA DIREITA)
+   ========================================================================== */
+.content {
+    width: 75%;
+    background-color: #e5e5e5; /* Tom do fundo central da foto */
+    padding: 30px;
+}
+
+.content h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #000000;
+}
+
+.content p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   RODAPÉ (FOOTER CINZA ESCURO)
+   ========================================================================== */
+.footer {
+    background-color: #616161;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+}

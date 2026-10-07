@@ -1,0 +1,73 @@
+/* Configurações Globais e do Corpo da Página */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;           /* Aumenta o espaçamento entre linhas para melhor leitura */
+    max-width: 1200px;           /* Limita a largura máxima */
+    margin: 0 auto;             /* Centraliza a página na tela */
+    padding: 20px;              /* Espaço interno para não colar nas bordas em celulares */
+    color: #333333;             /* Cor de texto ligeiramente suave para leitura */
+}
+
+/* Centralização de Imagens */
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;             /* Espaço acima e abaixo da imagem */
+}
+
+/* Borda / Linha de Divisão */
+hr {
+    border: none;
+    height: 2px;
+    background-color: #000000;
+    margin: 30px 0;             /* Substitui a necessidade de usar <br><hr><br> no HTML */
+}
+
+/* Títulos */
+h1 {
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+}
+
+h2 {
+    font-size: 28px;
+    margin-top: 25px;
+}
+
+h3, h4 {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+/* Parágrafos e Listas */
+p, li {
+    font-size: 18px;            /* Tamanho de fonte padrão mais equilibrado */
+}
+
+ul {
+    margin-bottom: 20px;
+    type: disc;                  /* Define o estilo da lista como bolinhas */
+}
+
+/* Links */
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estilização do Rodapé */
+footer {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+small {
+    font-size: 16px;
+    color: #555555;
+}

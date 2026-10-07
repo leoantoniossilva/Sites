@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - I Semana Acadêmica de Computação</title>
+    <!-- Vinculação do CSS externo conforme enunciado (estilos.css) -->
+    <link rel="stylesheet" href="CSS/Prática_6.css">
+</head>
+<body>
+
+    <!-- Cabeçalho Principal -->
+    <header id="principal">
+        <h1>Semana Acadêmica da Computação</h1>
+        <p class="destaque">Inovação, Tecnologia e Conhecimento na Prática</p>
+    </header>
+
+    <main class="container">
+
+        <!-- PARTE 1: Informações do Evento -->
+        <section id="informacoes">
+            <h2>Informações do Evento</h2>
+
+            <h3>Como Fazer sua Inscrição</h3>
+            <ol>
+                <li>Preencha seus dados de contato no formulário abaixo.</li>
+                <li>Selecione o tipo de atendimento e os tópicos de seu interesse.</li>
+                <li>Aceite os termos e envie sua mensagem para a nossa equipe.</li>
+            </ol>
+
+            <h3>Benefícios de Participar</h3>
+            <ul>
+                <li>Certificado de 20 horas complementares.</li>
+                <li>Oportunidade de networking com profissionais e professores.</li>
+                <li>Sorteios e brindes exclusivos do evento.</li>
+            </ul>
+
+            <h3>Links e Suporte</h3>
+            <p>
+                Acesse o <a href="https://github.com" target="_blank" class="link-termo">Repositório Oficial do Evento</a> ou confira os 
+                <a href="#termos" class="link-termo">Termos de Uso e Privacidade</a>.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- PARTE 2: Cronograma -->
+        <section id="cronograma">
+            <h2>Cronograma Geral do Evento</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Horário</th>
+                        <th>Dia 1</th>
+                        <th>Dia 2</th>
+                        <th>Dia 3</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>08:00 - 10:00</b></td>
+                        <td>Abertura Magna</td>
+                        <td rowspan="2">Hackathon de Programação</td>
+                        <td>IA na Prática</td>
+                    </tr>
+                    <tr>
+                        <td><b>10:00 - 12:00</b></td>
+                        <td>Mesa Redonda</td>
+                        <td>Desenvolvimento Web</td>
+                    </tr>
+                    <tr class="coffee-break">
+                        <td><b>12:00 - 13:30</b></td>
+                        <td colspan="3"><b>Coffee Break & Almoço</b></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <hr>
+
+        <!-- PARTE 3: Formulário de Contato Estruturado em Divs (Atividade Box Model) -->
+        <section id="contato">
+            <h2>Formulário de Contato e Atendimento</h2>
+            <p>Preencha os campos abaixo para entrar em contato com a comissão organizadora:</p>
+
+            <form action="#" method="POST" class="form-card">
+                
+                <!-- Campo 1: Nome Completo (Text) -->
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+                </div>
+
+                <!-- Campo 2: E-mail (Email) -->
+                <div class="form-group">
+                    <label for="email">E-mail de Contato:</label>
+                    <input type="email" id="email" name="email" placeholder="seu.email@dominio.com" required>
+                </div>
+
+                <!-- Campo 3: Seleção Suspensa (Select) -->
+                <div class="form-group">
+                    <label for="assunto">Assunto Principal:</label>
+                    <select id="assunto" name="assunto" required>
+                        <option value="" disabled selected>Selecione o assunto...</option>
+                        <option value="duvidas">Dúvidas sobre Inscrições</option>
+                        <option value="submissao">Submissão de Trabalhos</option>
+                        <option value="patrocinio">Propostas de Patrocínio</option>
+                        <option value="outro">Outros Assuntos</option>
+                    </select>
+                </div>
+
+                <!-- Campo 4: Seleção Exclusiva (Radio) -->
+                <div class="form-group">
+                    <label>Tipo de Atendimento:</label>
+                    <div class="options-group">
+                        <label class="option-label">
+                            <input type="radio" name="tipo_atendimento" value="aluno" checked> Aluno da Instituição
+                        </label>
+                        <label class="option-label">
+                            <input type="radio" name="tipo_atendimento" value="externo"> Comunidade Externa
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Campo 5: Múltipla Escolha (Checkbox) -->
+                <div class="form-group">
+                    <label>Tópicos de Interesse:</label>
+                    <div class="options-group">
+                        <label class="option-label">
+                            <input type="checkbox" name="interesses" value="palestras"> Desejo receber lembretes das palestras
+                        </label>
+                        <label class="option-label">
+                            <input type="checkbox" name="interesses" value="novidades"> Aceito receber novidades e boletins por e-mail
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Campo 6: Área de Texto (Textarea) -->
+                <div class="form-group">
+                    <label for="mensagem">Sua Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva aqui detalhadamente sua dúvida ou mensagem..." required></textarea>
+                </div>
+
+                <!-- Ações do Formulário / Botão -->
+                <div class="actions">
+                    <button type="submit" class="btn-submit">Enviar Mensagem</button>
+                </div>
+
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>I Semana Acadêmica de Computação | Curso de Ciência da Computação</p>
+    </footer>
+
+</body>
+</html>
